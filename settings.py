@@ -1,7 +1,12 @@
 # Django settings for gallery project.
+import os
+
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
+
+WORKDIR = os.getcwd()
+get_path = lambda x: os.path.join(WORKDIR, x)
 
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
@@ -27,11 +32,11 @@ DATABASES = {
 # timezone as the operating system.
 # If running in a Windows environment this must be set to the same as your
 # system time zone.
-TIME_ZONE = 'America/Chicago'
+TIME_ZONE = 'Asia/Yekaterinburg'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru-ru'
 
 SITE_ID = 1
 
@@ -45,7 +50,7 @@ USE_L10N = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/media/"
-MEDIA_ROOT = ''
+MEDIA_ROOT = get_path('media')
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
@@ -103,6 +108,7 @@ MIDDLEWARE_CLASSES = (
 ROOT_URLCONF = 'gallery.urls'
 
 TEMPLATE_DIRS = (
+    get_path('templates'),
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -143,3 +149,5 @@ LOGGING = {
         },
     }
 }
+
+import local_settings
