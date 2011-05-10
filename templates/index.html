@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Галерея фотографий{% endblock title %}
+
+{% block content %}
+{% if images %}
+    {% for image in images %}
+        {{ image.title }}<br />
+        {{ image.image_file }}
+    {% endfor %}
+{% endif %}
+{% endblock content %}
