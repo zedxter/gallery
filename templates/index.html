@@ -6,7 +6,7 @@
 {% if images %}
     {% for image in images %}
         {{ image.title }}<br />
-        {{ image.image_file }}
+        <img src="/media/{{ image.image_file }}" />
     {% endfor %}
 {% endif %}
 {% endblock content %}
