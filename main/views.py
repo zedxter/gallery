@@ -3,5 +3,5 @@ from django.shortcuts import render_to_response
 from main.models import Image
 
 def index(request):
-    images = Image.objects.all()
-    return render_to_response('index.html', {'images': images})
+    image = Image.objects.get(pk=1)
+    return render_to_response('index.html', {'image': image})

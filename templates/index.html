@@ -3,10 +3,15 @@
 {% block title %}Галерея фотографий{% endblock title %}
 
 {% block content %}
-{% if images %}
-    {% for image in images %}
-        {{ image.title }}<br />
-        <img src="/media/{{ image.image_file }}" /><br />
-    {% endfor %}
-{% endif %}
+<table class="site_content">
+	<tr>
+		<td>
+		{% if image %}
+			<img src="/media/{{ image.image_file }}" /><br />
+		{% endif %}
+		</td>
+		<td>
+		</td>
+	</tr>
+</table>
 {% endblock content %}
