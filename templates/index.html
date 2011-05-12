@@ -3,15 +3,30 @@
 {% block title %}Галерея фотографий{% endblock title %}
 
 {% block content %}
-<table class="site_content">
-	<tr>
-		<td>
-		{% if image %}
-			<img src="/media/{{ image.image_file }}" /><br />
-		{% endif %}
-		</td>
-		<td>
-		</td>
-	</tr>
-</table>
+<div class="content_left_column">
+{% if image %}
+    <img src="/media/{{ image.image_file }}" />
+{% endif %}
+</div>
+<div class="content_right_column">
+    <div class="label">
+        <img src="/media/img/label.png"/>
+    </div>
+    <div class="menu">
+        <ul>
+            <li>
+                ГАЛЕРЕЯ
+                <div class="menu_gallery_submenu">
+                    <ul>
+                        <li>КАРТИНЫ</li>
+                        <li>ПОДЕЛКИ</li>
+                    </ul>
+                </div>
+            </li>
+            <li>ВЫСТАВКИ</li>
+            <li>УКРАШЕНИЯ</li>
+            <li>КОНТАКТЫ</li>
+        </ul>
+    </div>
+</div>
 {% endblock content %}
