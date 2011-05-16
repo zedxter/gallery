@@ -4,9 +4,7 @@
 
 {% block content %}
 <div class="content_left_column">
-{% if image %}
-    <img src="/media/{{ image.image_file }}" />
-{% endif %}
+    <img class="molbert" src="/media/img/molbert.png" />
 </div>
 <div class="content_right_column">
     <div class="label">
@@ -14,7 +12,7 @@
     </div>
     <div class="menu">
         <ul>
-            <li>
+            <li class="menu_item">
                 ГАЛЕРЕЯ
                 <div class="menu_gallery_submenu">
                     <ul>
@@ -23,9 +21,9 @@
                     </ul>
                 </div>
             </li>
-            <li>ВЫСТАВКИ</li>
-            <li>УКРАШЕНИЯ</li>
-            <li>КОНТАКТЫ</li>
+            <li class="menu_item">ВЫСТАВКИ</li>
+            <li class="menu_item">УКРАШЕНИЯ</li>
+            <li class="menu_item">КОНТАКТЫ</li>
         </ul>
     </div>
 </div>

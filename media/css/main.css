@@ -18,26 +18,25 @@ html, body {height: 100%;}
 * html .site_content {
     height: 100%;
 }
-.site_content DIV { 
+.content_left_column, .content_right_column { 
     float: left;
     display: table-cell; 
     vertical-align: middle;
-}
-.content_left_column {
     width: 50%;
     padding-bottom: 20px;
 }
-.content_right_column {
-    width: 50%;
-    padding-bottom: 20px;
+img.molbert {
+    margin-top: 60px;
+    width: 90%;    
 }
-img {
-    width: 95%;    
+.label img {
+    margin-top: 30px;
+    width: 90%;
 }
 .label {
-    margin-left: 20%;
-    margin-right: 10%;
-    width: 70%;
+    margin-left: 10%;
+    margin-right: 5%;
+    width: 85%;
     min-width: 350px;
 }
 .menu {
@@ -45,6 +44,8 @@ img {
     margin-right: 5%;
     width: 90%;
     min-width: 460px;
+    font-family: Geneva, Arial, Helvetica, sans-serif;
+    font-size: 10pt;
 }
 .menu li {
     list-style: none;
@@ -56,13 +57,12 @@ img {
     cursor: pointer;
 }
 .menu li:hover {
-    background: #FFFFFF;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
+    font-weight: bold;
 }
 .menu_gallery_submenu {
     display: none;
 }
 body {
-    background: #D3D3D3;
+    background-image: url('/media/img/bg.png');
+    background-size: 100%;
 }
