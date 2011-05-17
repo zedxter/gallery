@@ -62,6 +62,10 @@ img.molbert {
 .menu_gallery_submenu {
     display: none;
 }
+.menu_gallery_submenu li {
+    font-weight: normal;
+    clear: both;
+}
 body {
     background-image: url('/media/img/bg.png');
     background-size: 100%;

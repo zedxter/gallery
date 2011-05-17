@@ -2,6 +2,18 @@
 
 {% block title %}Галерея фотографий{% endblock title %}
 
+{% block scripts %}
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(".menu_item").hover(function(){
+            $(this).find(".menu_gallery_submenu").show();
+        }, function(){
+            $(this).find(".menu_gallery_submenu").hide();
+        });
+    });
+</script>
+{% endblock scripts %}
+
 {% block content %}
 <div class="content_left_column">
     <img class="molbert" src="/media/img/molbert.png" />
@@ -16,7 +28,7 @@
                 <div class="menu_gallery_submenu">
                     <ul>
                         {% for group in groups %}
-                        <li>{{group.name}}</li>
+                        <li>{{group.name|upper}}</li>
                         {% endfor %}
                     </ul>
                 </div>
