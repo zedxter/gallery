@@ -15,8 +15,9 @@
             <li class="menu_item">ГАЛЕРЕЯ
                 <div class="menu_gallery_submenu">
                     <ul>
-                        <li>КАРТИНЫ</li>
-                        <li>ПОДЕЛКИ</li>
+                        {% for group in groups %}
+                        <li>{{group.name}}</li>
+                        {% endfor %}
                     </ul>
                 </div>
             </li>
