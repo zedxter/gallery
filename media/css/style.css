@@ -5,7 +5,6 @@ html {
 	overflow-y: hidden;
 }
 
-
 body {
 	padding:0;margin:0;
 	color: #919191;
@@ -121,11 +120,7 @@ a img{
 	clear: both;
 	width: 100%;
 }
-/*.sous_menu > :first-child {
-	padding-top: 19px;
-	background:#ffffff url(../ui_images/spacer_titre.png) no-repeat center  top;
-}*/
-
+###
 #menu li.titre_menu span.actu {
 	position: relative;
 	display: block;
