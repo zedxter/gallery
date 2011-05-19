@@ -1,0 +1,262 @@
+html {
+	font-size: 100%; 
+	width: 100%;
+	height:100%;
+	overflow-y: hidden;
+}
+
+
+body {
+	padding:0;margin:0;
+	color: #919191;
+	background: #ffffff;
+
+	font-family: Helvetica, Arial, "Nimbus Sans L", sans-serif; 
+	font-size: 11px;
+	line-height: 1.25; 
+	width: 100%;
+	height:100%;
+}
+
+a img{
+	border: none;
+}
+
+#global{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	top:0;
+	overflow: hidden;
+	min-width: 900px;
+	max-width: 2880px;
+	margin-left: auto;
+	margin-right: auto; 
+
+	max-height: 1800px;
+	min-height: 500px;
+
+	clear: both;
+}
+
+#left{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 50%;
+	height: 100%;
+}
+
+#right{
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 50%;
+	height: 100%;
+}
+
+/*------------- Menu principal ------------ */
+#menu{
+	display: block;
+	margin: 0 auto;
+	width: 459px;
+	height: 215px;
+	position: relative;
+}
+
+#menu img {
+/*pour le loader*/
+	margin-left: 50%;
+	position: relative;
+}
+
+#mainmenu, #mainmenu ul {
+	padding: 0;margin: 0;
+	list-style: none;
+	line-height: 22px;
+}
+
+#mainmenu li a {
+	display: block;
+	padding: 0;
+	text-decoration: none;
+	color: #919191;
+	font-size: 12px;
+	position: relative;
+}
+#menu li.titre_menu a {
+	height: 22px;
+	white-space: nowrap;
+}
+#menu li.titre_menu span { 
+	display: block;
+	position: absolute;
+	bottom: 0px;
+	text-align: center;
+}
+
+#mainmenu li a:hover{
+	color: #000000;
+}
+#mainmenu li a:focus {
+	outline: none; 
+}
+
+#menu li.titre_menu { 
+	float: left;
+	margin: 0;padding: 0;
+}
+
+
+#mainmenu li ul.sous_menu {
+	clear: both;
+	width: 145px;
+	padding-top: 24px;
+	background: #FFF url(../ui_images/spacer_titre.png) no-repeat center 3px;
+	text-align: center;
+	display: none;
+}
+
+#mainmenu li ul.sous_menu li{
+	clear: both;
+	width: 100%;
+}
+/*.sous_menu > :first-child {
+	padding-top: 19px;
+	background:#ffffff url(../ui_images/spacer_titre.png) no-repeat center  top;
+}*/
+
+#menu li.titre_menu span.actu {
+	position: relative;
+	display: block;
+	padding: 0;
+	color: #000000;
+	padding-top: 15px;
+	width: 100%;
+	background: #FFF url(../ui_images/spacer_actu.gif) no-repeat center 7px;
+
+	font-size: 15px;
+	font-family: Times New Roman, Times, "Bitstream Vera Serif", Norasi, serif;
+/*	font-weight: bold;*/
+	font-style: italic;
+	text-align: center;
+}
+
+#mainmenu li ul.sous_menu li a{
+	height: auto;
+	white-space: normal;
+}
+
+/*------------ Logo -------------*/
+#logo {
+	position: relative;
+	height: 48%;
+}
+#logo img{
+	position: absolute;
+	left: 50%;top: 50%;
+	margin-left: -94px;
+	margin-top: -48px;
+}
+
+/*------------ left --------------*/
+#image_left {
+	position: absolute;
+	right: 0;
+	text-align: right;
+	float: right;
+}
+
+#image_left img {
+
+}
+
+.img_preload {
+	display: none;
+}
+
+#affichee {
+	position: absolute;
+	right: 0;
+}
+
+/* choix langues */
+#langues {
+	position: absolute;
+	margin: 0 auto;
+	bottom: 0;left: 0;
+	width: 100%;
+	background-color: #ffffff;
+	overflow: hidden;
+	visibility: hidden;
+}
+
+#langues a {
+	text-decoration: none;
+	color: #919191;
+}
+
+#langues a:hover {
+	color: #000000;
+}
+#langues a:focus {
+	outline: none;
+}
+
+
+#langues div.langhead {
+	text-align: center;
+	height: 63px;
+	background: #ffffff url(../ui_images/dblspacer_langues.gif) no-repeat center top;
+	line-height: 63px;
+}
+#langues div.langhead a {
+	text-decoration: none;
+	color: #000000;
+	line-height: 63px;
+}
+#langues div.langhead img {
+	-margin-top: 28px; /*ie 6*/
+}
+
+
+/* table choix langues */
+#table_langues {
+	background-color: #FFF;
+	margin: 0 auto;
+	margin-bottom: 10px;
+	width: 516px;
+}
+
+#table_langues td {
+	padding-top: 5px;
+	text-align: left;
+	width: 258px;
+	vertical-align: top;
+	height: 155px;
+}
+
+#table_langues td a {
+	display: block;
+	margin-left: 130px;
+	line-height: 18px;height: 18px;
+}
+#table_langues td img {
+	padding-top: 0;
+	-padding-top: 3px;/*ie6*/
+}
+
+#table_langues td div {
+
+	border-left: 1px solid #EBEBEB;
+	padding:0;margin:0;
+	padding-left: 22px;
+}
+#table_langues td div a {
+	padding:0;margin:0;
+}
+
+#votre_langue {
+	color: #000000;
+}
+
