@@ -1,3 +1,4 @@
+# -*- coding: utf8 -*-
 from django.db import models
 
 class Group(models.Model):
@@ -5,6 +6,10 @@ class Group(models.Model):
 
     def __unicode__(self):
         return self.name
+
+    class Meta:
+        verbose_name = 'Категория'
+        verbose_name_plural = 'Категории'
 
 class Image(models.Model):
     title = models.CharField(max_length=200)
@@ -14,3 +19,7 @@ class Image(models.Model):
 
     def __unicode__(self):
         return self.title
+
+    class Meta:
+        verbose_name = 'Картинка'
+        verbose_name_plural = 'Картинки'
