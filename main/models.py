@@ -21,5 +21,5 @@ class Image(models.Model):
         return self.title
 
     class Meta:
-        verbose_name = 'Картинка'
-        verbose_name_plural = 'Картинки'
+        verbose_name = 'Фото'
+        verbose_name_plural = 'Фото'
