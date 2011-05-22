@@ -2,3 +2,5 @@
 local_settings.py
 .project
 .pydevproject
+*.db
+media/photos/*
