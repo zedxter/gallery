@@ -1,8 +1,7 @@
 # Django settings for gallery project.
 import os
 
-DEBUG = True
-TEMPLATE_DEBUG = DEBUG
+DEBUG = False
 
 WORKDIR = os.getcwd()
 get_path = lambda x: os.path.join(WORKDIR, x)
@@ -154,3 +153,9 @@ LOGGING = {
     }
 }
 
+try:
+    from settings_local import *
+except ImportError:
+    print u'File settings_local.py is not found. Continuing with production settings.'
+
+TEMPLATE_DEBUG = DEBUG
