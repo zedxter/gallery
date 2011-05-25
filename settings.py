@@ -12,8 +12,6 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
-INTERNAL_IPS = ('127.0.0.1', '85.12.231.40',)
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
@@ -103,7 +101,6 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'debug_toolbar.middleware.DebugToolbarMiddleware',
 )
 
 ROOT_URLCONF = 'gallery.urls'
@@ -124,7 +121,6 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'main',
     'south',
-    'debug_toolbar',
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
@@ -153,9 +149,5 @@ LOGGING = {
     }
 }
 
-try:
+if os.path.isfile(_get_path('settings_local.py')):
     from settings_local import *
-except ImportError:
-    print u'File settings_local.py is not found. Continuing with production settings.'
-
-TEMPLATE_DEBUG = DEBUG
