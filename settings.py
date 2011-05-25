@@ -6,9 +6,9 @@ DEBUG = False
 WORKDIR = os.getcwd()
 _get_path = lambda x: os.path.join(WORKDIR, x)
 
-ADMINS = (
-    ('Dan Galeev', 'digaleev@gmail.com'),
-)
+#ADMINS = (
+#    ('Dan Galeev', 'digaleev@gmail.com'),
+#)
 
 MANAGERS = ADMINS
 
