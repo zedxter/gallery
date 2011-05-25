@@ -4,10 +4,10 @@ import os
 DEBUG = False
 
 WORKDIR = os.getcwd()
-get_path = lambda x: os.path.join(WORKDIR, x)
+_get_path = lambda x: os.path.join(WORKDIR, x)
 
 ADMINS = (
-    # ('Your Name', 'your_email@example.com'),
+    ('Dan Galeev', 'digaleev@gmail.com'),
 )
 
 MANAGERS = ADMINS
@@ -17,7 +17,7 @@ INTERNAL_IPS = ('127.0.0.1', '85.12.231.40',)
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': get_path('gallery.db'),                      # Or path to database file if using sqlite3.
+        'NAME': _get_path('gallery.db'),                      # Or path to database file if using sqlite3.
         'USER': '',                      # Not used with sqlite3.
         'PASSWORD': '',                  # Not used with sqlite3.
         'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
@@ -50,7 +50,7 @@ USE_L10N = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/media/"
-MEDIA_ROOT = get_path('media')
+MEDIA_ROOT = _get_path('media')
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
@@ -109,7 +109,7 @@ MIDDLEWARE_CLASSES = (
 ROOT_URLCONF = 'gallery.urls'
 
 TEMPLATE_DIRS = (
-    get_path('templates'),
+    _get_path('templates'),
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
