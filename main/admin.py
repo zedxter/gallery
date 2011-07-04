@@ -9,8 +9,8 @@ class ImageAdmin(admin.ModelAdmin):
     list_filter = ('group', 'pub_date')
 
 admin.site.register(Image, ImageAdmin)
-admin.site.register(Gr)
+admin.site.register(Group)
 
 admin.site.unregister(User)
-admin.site.unregister(Group)
+admin.site.unregister(Gr)
 admin.site.unregister(Site)
